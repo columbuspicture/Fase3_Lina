@@ -1,91 +1,156 @@
+body {
+    font-family: sans-serif;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hojas de Estilo en Cascada CSS, Frameworks CSS</title>
+/* layout con CSS Grid */
 
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=507846746771750&autoLogAppEvents=1" nonce="8QWGxhxY"></script>
-          
-    <div class="wrapper">
-            
-        <header>
-            <h1>Hojas de Estilo en Cascada CSS, Frameworks CSS</h1>
-        </header>
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header header" 
+    "nav    nav" 
+    "main   aside" 
+    "footer footer";
+}
 
-        <nav>
-            <ul>
-                <li><a href="./index.html">🏠 Inicio</a></li>
-                <li id="temas">📚 Temas
-                    <ul class="submenu">
-                        <li><a href="./temas1.html">📚 Hojas de Estilo en Cascada CSS</a></li>
-                        <li><a href="./temas1.html">📚 Los Frameworks CSS</a></li>
-                    </ul>
-                </a>
-                </li>
-                <li id="recursos">💻 Recursos digitales
-                    <ul class="submenu">
-                        <li><a href="./recursos1.html">💻 Videotutorial básico de CSS</a></li>
-                        <li><a href="./recursos2.html">💻 Videotutorial básico de Frameworks CSS</a></li>
-                    </ul>
-                </li>
-                <li id="aprendizaje">👩‍🎓 Aprendizaje
-                    <ul class="submenu">
-                        <li><a href="#">Opción 1</a></li>
-                        <li><a href="#">Opción 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="./autor.html">❓ Acerca de</a></li>
-            </ul>
-        </nav>
+header {
+    grid-area: header;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+}
 
-        <article class="main">
+nav {    
+    margin-top: -20px;
+    grid-area: nav;
+    padding: 10px 0;
+    background-color: crimson;
+}
 
-            <h2>Info General</h2>
+.main {
+    grid-area: main;
+    padding: 10px;
+}
 
-            <p>¡Bienvenido al sitio de Hojas de Estilo en Cascada (CSS) y Frameworks CSS!</p>
+aside {
+    grid-area: aside;
+    padding: 0;
+    max-width: 310px;
+}
 
-            <p>
-                En este sitio obtendrá información sobre qué son las CSS y qué son los framewords web. 
-                Esto nace de la necesidad que tienen los diseñadores web de darle estilos a sus documentos HTML para que sean atractivos y visualmente agradables.
-            </p>
+footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    padding-bottom: 30px;
+}
+
+footer hr {
+    margin-bottom: 30px;
+}
 
 
-            <h2>Propósito del Sitio</h2>
-            <p>Este sitio tiene como propósito proporcionar información sobre las Hojas de Estilo en Cascada CSS y los Frameworks CSS. Esto se hace como desarrollo de la actividad de fase 3 del curso de Diseño Web.</p>
+/* estilos de botones en menú */
 
-            <h2>introducción a las temáticas</h2>
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-            <p>Las Hojas de Estilo en Cascada vinieron a cumplir el rol de darle estilos a los documentos creados mediante el lenguaje de marcado HTML, el cual se convirtió en el estándar para desarrollar documentos visibles en el internet.</p>
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+}
 
-            <p>Actualmente, el internet sigue creciendo y mas gente lo usa como fuente de información y lugar de trabajo. Internet se ha vuelto para muchos el medio de vida, o sino, algo muy importante en su vida diaria.</p>
+nav ul li:hover {
+    background-color: lightcoral;
+    color: black;
+}
 
-            <p>Todas esta cantidad de información disponible es en gran aprte consumida por mediod e navegadores web mediante dispositivos móviles o de escritorio. El lenguaje HTML nos permite presentar el contenido que queremos mostrar al mundo.</p>
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
 
-            <p>Sin embargo, HTML no da estilos a los elementos, solamente los crea y organiza. Para estilos y posicionamiento se usa el lenguaje CSS y en este sitio veremos información sobre esta maravillosa tecnología.</p>
+nav ul li:hover a {
+    text-decoration: none;
+    color: white;
+}
 
-            <p>¡Disfruta el sitio!</p>
+nav ul .submenu {
+    display: none;
+    flex-direction: column;
+    background-color: lightcoral;
+    margin: 10px 0 0 0;
+}
 
-        </article>
+nav ul .submenu li a {
+    color: black;
+}
 
-        <aside>
-            <div class="fb-page" data-href="https://www.facebook.com/UniversidadUNAD/" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/UniversidadUNAD/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/UniversidadUNAD/">Universidad Nacional Abierta y a Distancia - UNAD Colombia</a></blockquote></div>
-        </aside>
-        
-        
-        <footer>
-            <hr>
-            <span>📧 Email: Lmsepulvedau@unadvirtual.edu.co  📞 Skype:  live:live:guillermojoseagudelo</span> <br>
-            <span>© Derechos reservados - Actualizado el 21/10/2021</span>
-        </footer>
+nav ul .submenu li a:hover {
+    color: white;
+}
 
-    
-    </div>
+nav ul .submenu li:hover {
+    display: flex;
+    flex-direction: column;
+    background-color: crimson;
+    color: white;
+}
 
-    <script src="index.js"></script>
-</body>
-</html>
+#foto-guillermo {
+    border: solid 4px gray;
+    border-radius: 50%;
+}
+
+#acercade {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "foto info";
+}
+
+#acercade .foto {
+    grid-area: foto;
+}
+
+#acercade .info {
+    grid-area: info;
+}
+
+.sig-ant {
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    padding: 4px 10px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px gray;
+}
+
+.sig-ant a {
+    text-decoration: none;
+}
+.sig-ant:hover {
+    box-shadow: 4px 4px 10px gray;
+}
+
+h1, h2, h3, h4, h5 {
+    color: crimson;
+}
+
+header h1 {
+    color: white;
+}
+
+p {
+    line-height: 20px;
+}
