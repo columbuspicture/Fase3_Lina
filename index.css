@@ -19,7 +19,7 @@ header {
     grid-area: header;
     padding: 10px 20px;
     background-color: crimson;
-    color: white;
+    color: black;
 }
 
 nav {    
